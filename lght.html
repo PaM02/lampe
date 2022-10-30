@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch</title>
+ 
+     <!-- Compiled and minified CSS of Materialize -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+ 
+    <!-- Font Awesome Icon -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+   
+     <!-- Custom Style -->
+     <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+ 
+
+  <div class="bulb">
+        <i class="fas fa-lightbulb"></i>
+    </div>
+ 
+     <!-- Switch -->
+     <div class="switch">
+            <label>
+              Off
+              <input type="checkbox">
+              <span class="lever"></span>
+              On
+            </label>
+    </div>
+ 
+ 
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     
+    <!-- Materialize minifed JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+     
+</body>
+<script>
+  $(document).ready(function(){
+      $("input[type=checkbox]").on("click", function() {
+          if($(this).is(":checked")){
+              $(".bulb i").css({
+                  "color" : "white",
+                  "text-shadow" : "2px 2px 900px white"
+              });
+          }else{
+              $(".bulb i").css({
+                  "color" : "black",
+                  "text-shadow" : "none"
+              });
+          }
+        });
+  });
+</script>
+</html>
